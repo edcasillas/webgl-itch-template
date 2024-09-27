@@ -139,19 +139,6 @@
             }
           });
 
-          function lockChangeAlert() {
-            if(document.pointerLockElement === canvas || document.mozPointerLockElement === canvas){
-              unityInstance.SendMessage('WebGLBridge', 'OnPointerLockChanged', 1);
-              console.log('[edcasillas] LOCKED')
-            } else {
-              unityInstance.SendMessage('WebGLBridge', 'OnPointerLockChanged', 0);
-              console.log('[edcasillas] UNLOCKED')
-            }
-          }
-
-          document.addEventListener('pointerlockchange', lockChangeAlert, false);
-          document.addEventListener('mozpointerlockchange', lockChangeAlert, false);
-
         }).catch((message) => {
           alert(message);
         });
