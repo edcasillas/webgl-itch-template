@@ -130,15 +130,6 @@
 
           console.log('[edcasillas] Instance has loaded!');
 
-          window.addEventListener('keydown', function(e) {
-            console.log('[edcasillas] Key was pressed: ' + e.key);
-            if(e.key == "Escape"){
-              //msg.textContent += 'Escape pressed:'
-              console.log('[edcasillas] escape was pressed!');
-              e.preventDefault();
-            }
-          });
-
         }).catch((message) => {
           alert(message);
         });
